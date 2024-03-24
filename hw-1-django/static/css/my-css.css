@@ -1,0 +1,34 @@
+.avatar {
+    width:75px;
+    border-radius:5px;
+}
+.logo{
+    font-size: 50px;
+    align-items: center;
+}
+
+.my-name{
+    font-size: 18pt;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.me-part{
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.my-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.classify-image{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18pt;
+}

@@ -2,3 +2,6 @@
 venv
 cifar*
 homework-1/images
+hw-1-django/media/images/*
+logs
+*ksusha*

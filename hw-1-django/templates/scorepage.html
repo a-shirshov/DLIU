@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="windows-1251">
+<title>Домашнее задание 1</title>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/my-css.css" %}" rel="stylesheet">
+ </head>
+
+<body>
+    <!-- Navbar -->
+    {% include "include/navbar.html" %}  
+    <div class="classify-image">
+        Ваше изображение:
+        {% if imagePath %}
+        <img src={{imagePath}}>
+        {% else %}
+        <img src="{% static "img/cat_mew.jpg" %}">
+        {% endif %}
+    </div>
+    <div>
+        {% if scorePrediction %}
+        <h3>На изображении изображён : {{scorePrediction}}</h3>
+        {% endif %}
+    </div>
+    <div class="container">
+        <form action="predictImage" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="col-md-4 col-sm-4">
+                <label for="FilePath">Загрузить изображение:</label>
+            </div> <input name="filePath" type="file"><br><br>
+            <input type="submit" value="Submit" >
+        </form>
+    </div>  
+    <!-- Footer -->
+    {% include "include/footer.html" %}
+</body>
+</html>
