@@ -19,24 +19,23 @@
         {% if imagePath %}
         <img src={{imagePath}}>
         {% else %}
-        <img src="{% static "img/cat_mew.jpg" %}">
+        <img src="{% static "img/upload_file.png" %}">
         {% endif %}
     </div>
-    <div>
+    <div class="classify-image">
         {% if scorePrediction %}
-        <h3>На изображении изображён : {{scorePrediction}}</h3>
+        <h3>На изображении обнаружен гриб:</h3>
+        <h3>{{scorePrediction}}</h3>
         {% endif %}
     </div>
-    <div class="container">
+    <div class="container classify-image">
         <form action="predictImage" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <div class="col-md-4 col-sm-4">
+            <div>
                 <label for="FilePath">Загрузить изображение:</label>
             </div> <input name="filePath" type="file"><br><br>
             <input type="submit" value="Submit" >
         </form>
     </div>  
-    <!-- Footer -->
-    {% include "include/footer.html" %}
 </body>
 </html>
