@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <meta charset="windows-1251">
 <title>Домашнее задание 1</title>
 
@@ -35,14 +35,12 @@
         <h3>Признаки: {{criteria}}</h3>
         {% endif %}
     </div>
-    <div class="container classify-image">
-        <form action="predictImage" method="post" enctype="multipart/form-data">
+    <div class="container">
+        <form action="predictImage" class="classify-image" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <div>
-            <label for="FilePath" >Загрузить изображение:</label>
-            
-            </div> <input name="filePath" type="file" id="files"><br><br>
-            <input type="submit" value="Подтвердить">
+            <label for="userImage" class="kind-button">Выбрать изображение</label>
+            <input type="file" id="userImage" name="filePath" accept="image/png, image/jpeg" style="visibility:hidden;"/>
+            <input type="submit"  value="Подтвердить">
         </form>
     </div>  
 </body>
