@@ -26,15 +26,23 @@
         {% if scorePrediction %}
         <h3>На изображении обнаружен гриб:</h3>
         <h3>{{scorePrediction}}</h3>
+    </div>
+    <div class="andrew_tate">
+        <h3>1. Описание: {{desc}}</h3>
+        <h3>2. Съедобность: {{tasty}}</h3>
+        <h3>3. Латинское описание: {{latin}}</h3>
+        <br><br>
+        <h3>Признаки: {{criteria}}</h3>
         {% endif %}
     </div>
     <div class="container classify-image">
         <form action="predictImage" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div>
-                <label for="FilePath">Загрузить изображение:</label>
-            </div> <input name="filePath" type="file"><br><br>
-            <input type="submit" value="Submit" >
+            <label for="FilePath" >Загрузить изображение:</label>
+            
+            </div> <input name="filePath" type="file" id="files"><br><br>
+            <input type="submit" value="Подтвердить">
         </form>
     </div>  
 </body>

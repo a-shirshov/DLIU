@@ -30,5 +30,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 18pt;
+    font-size: 12pt;
+}
+
+.andrew_tate {
+    width: 1200px;
+    display: block;
+    margin-left:20px;
 }
