@@ -5,3 +5,5 @@ homework-1/images
 hw-1-django/media/images/*
 logs
 *ksusha*
+hw2-app/node_modules/
+hw2-app/src/model.onnx
